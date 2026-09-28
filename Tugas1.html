@@ -1,0 +1,233 @@
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farsha Keysan Aryadi — Linktree</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+    :root {
+    --bg: #0a0e14;
+    --panel: #10161f;
+    --border: #1e2733;
+    --text: #d7dde5;
+    --muted: #7c8a9c;
+    --accent: #4fd1c5;
+    --accent-dim: rgba(79, 209, 197, 0.15);
+    --warn: #f2c94c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    background:
+        radial-gradient(circle at 20% 10%, #101a24 0%, transparent 45%),
+        radial-gradient(circle at 80% 90%, #0d1b1a 0%, transparent 45%),
+        var(--bg);
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    }
+
+    .terminal-frame {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+    }
+
+    .terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #0d131b;
+    border-bottom: 1px solid var(--border);
+    }
+
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot.red { background: #ff5f56; }
+    .dot.yellow { background: #ffbd2e; }
+    .dot.green { background: #27c93f; }
+
+    .terminal-title {
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    }
+
+    .card {
+    background: var(--panel);
+    padding: 40px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+
+    .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    object-fit: cover;
+    margin-bottom: 18px;
+    }
+
+    .name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: #fff;
+    }
+
+    .role {
+    font-size: 13px;
+    color: var(--accent);
+    margin: 0 0 14px;
+    font-family: 'JetBrains Mono', monospace;
+    }
+
+    .bio {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 30ch;
+    margin: 0 0 28px;
+    }
+
+    .links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 34px;
+    }
+
+    .link-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 13px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #0d1219;
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    text-align: left;
+    transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+    }
+
+    .link-btn .prompt { color: var(--accent); font-weight: 700; }
+
+    .link-btn:hover {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    transform: translateX(4px);
+    }
+
+    .link-btn:hover .prompt { color: var(--warn); }
+
+    .hobbies {
+    width: 100%;
+    text-align: left;
+    border-top: 1px dashed var(--border);
+    padding-top: 22px;
+    }
+
+    .hobbies h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 14px;
+    font-weight: 600;
+    }
+
+    .hobbies h2 .prompt { color: var(--warn); }
+
+    .hobby-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    }
+
+    .hobby-list li {
+    font-size: 13px;
+    background: #0d1219;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    }
+
+    .footer {
+    margin-top: 30px;
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    }
+    </style>
+    </head>
+    <body>
+
+    <div class="terminal-frame">
+        <div class="terminal-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">~/Farsha</span>
+        </div>
+
+        <main class="card">
+
+        <img class="avatar" src="FOTO.jpeg" alt="Foto profil">
+
+        <h1 class="name">Farsha Keysan Aryadi</h1>
+        <p class="bio">Suka ayam geprek, makan, dan belajar hal baru seputar teknologi web.</p>
+
+        <nav class="links">
+            <a class="link-btn" href="https://github.com/farshakeysan" target="_blank" rel="noopener">
+            <span class="prompt">$</span> github.com/farshakeysan
+            </a>
+            <a class="link-btn" href="https://www.tiktok.com/@motornyamiminfupink" target="_blank" rel="noopener">
+            <span class="prompt">$</span> tiktok.com/@motornyamiminfupink
+            </a>
+            <a class="link-btn" href="https://instagram.com/keeyaja" target="_blank" rel="noopener">
+            <span class="prompt">$</span> instagram.com/keeyaja
+            </a>
+        </nav>
+
+        <section class="hobbies">
+            <h2><span class="prompt">#</span> hobbies.list</h2>
+            <ul class="hobby-list">
+            <li>Ngegame</li>
+            <li>Jalan-Jalan</li>
+            <li>Bersepeda</li>
+            <li>Makan</li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <span>&copy; 2026 Farsha Keysan Aryadi</span>
+        </footer>
+
+        </main>
+    </div>
+
+    </body>
+    </html>
